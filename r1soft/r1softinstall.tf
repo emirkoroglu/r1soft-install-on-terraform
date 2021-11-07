@@ -24,8 +24,8 @@ resource "aws_instance" "r1soft" {
     inline = [
       "sudo cp /tmp/r1soft.repo /etc/yum.repos.d/",
       "sudo  yum install r1soft-cdp-enterprise-server -y",
-      "sudo r1soft-setup --user emir --pass dev@psteam --http-port 80 --http-port 443",
-      "sudo systemctl restart sbm-server",
+      "sudo r1soft-setup --user emir --pass dev@psteam",
+      "sudo systemctl restart cdp-server",
     ]
   }
 
